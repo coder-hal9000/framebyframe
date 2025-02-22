@@ -1,0 +1,43 @@
+.movie-cards > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
+  grid-gap: 24px;
+}
+
+.movie-cards > ul > li {
+  background-color: var(--background-color);
+  border-radius: 8px;
+}
+
+.movie-cards > ul > li:hover {
+  transform: scale(1.05);
+}
+
+.movie-cards .movie-cards-card-image {
+  line-height: 0;
+}
+
+.movie-cards > ul > li img {
+  border-radius: 4px;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+}
+
+.movie-cards-card-body {
+  display: none;
+}
+
+.movie-card-link {
+  display: block; 
+  text-decoration: none; 
+  color: var(--text-color) !important;
+}
+
+.movie-card-link:hover {
+  text-decoration: none; 
+  color: var(--text-color) !important;
+}
