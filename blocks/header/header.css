@@ -293,7 +293,7 @@ header .breadcrumbs ol {
 /* stylelint-disable-next-line no-descending-specificity */
 header .breadcrumbs ol li {
   padding: 0;
-  color: var(--dark-color);
+  color: var(--text-color);
 }
 
 header .breadcrumbs ol li:not(:last-child)::after {
@@ -303,7 +303,7 @@ header .breadcrumbs ol li:not(:last-child)::after {
 
 /* stylelint-disable-next-line no-descending-specificity */
 header .breadcrumbs ol li[aria-current] {
-  color: var(--text-color);
+  font-weight: bold;
 }
 
 @media (width >= 900px) {
