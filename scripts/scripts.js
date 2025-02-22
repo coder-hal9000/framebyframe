@@ -12,6 +12,7 @@ import {
   loadSections,
   loadCSS,
 } from './aem.js';
+import { trackAnalytics } from './analytics-lib.js';
 
 /**
  * Builds hero block and prepends to main in a new section.
@@ -108,6 +109,7 @@ async function loadLazy(doc) {
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
+  trackAnalytics();
 }
 
 /**
