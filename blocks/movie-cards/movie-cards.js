@@ -6,11 +6,15 @@ export default function decorate(block) {
   [...block.children].forEach((row) => {
     const li = document.createElement('li');
     const movieLink = document.querySelector('a[href^="/movies/"]');
-
     // Create an anchor <a> tag to make the whole card clickable
     const link = document.createElement('a');
-    link.href = movieLink;
     link.className = 'movie-card-link';
+    if (movieLink) {
+      const movieUrl = movieLink.href;
+      const movieName = movieUrl.split('/movies/')[1].replace('/', '');
+      link.href = movieUrl;
+      link.setAttribute('aria-label', movieName);
+    }
 
     while (row.firstElementChild) {
       link.append(row.firstElementChild);
