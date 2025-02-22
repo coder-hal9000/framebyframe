@@ -1,5 +1,5 @@
 footer {
-  background-color: var(--light-color);
+  background-color: var(--background-color);
   font-size: var(--body-font-size-xs);
 }
 
@@ -7,6 +7,11 @@ footer .footer > div {
   margin: auto;
   max-width: 1200px;
   padding: 40px 24px 24px;
+}
+
+footer .footer a {
+  text-decoration: underline;
+  color: var(--text-color) !important;
 }
 
 footer .footer p {
