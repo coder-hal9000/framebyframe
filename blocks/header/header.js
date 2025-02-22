@@ -1,4 +1,4 @@
-import { fetchPlaceholders, getMetadata } from '../../scripts/aem.js';
+import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 // media query match that indicates mobile/tablet width
@@ -130,8 +130,7 @@ async function buildBreadcrumbsFromNavTree(nav, currentUrl) {
     crumbs.unshift({ title: getMetadata('og:title'), url: currentUrl });
   }
 
-  const placeholders = await fetchPlaceholders();
-  const homePlaceholder = placeholders.breadcrumbsHomeLabel || 'Home';
+  const homePlaceholder = 'Home';
 
   crumbs.unshift({ title: homePlaceholder, url: homeUrl });
 
