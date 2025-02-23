@@ -1,19 +1,64 @@
-# Your Project's Title...
-Your project's description...
+
+# Frame by Frame - Every Frame Tells a Story
+
+**Frame by Frame** is a fictional movie review platform designed to showcase the capabilities of AEM.live. It provides detailed analysis, reviews, and trivia on your favorite films. The images are sourced from TMDb for demonstration purposes only. This site is built for demonstration purposes and does not offer real movie reviews or commercial services.
+
+## Project Overview
+
+**Frame by Frame** serves as a demo site built with **AEM.live**, leveraging its capabilities to build a fast, scalable, and maintainable web application. The platform includes multiple pages, such as Home, Movies, Movie details and About us, and features a clean and responsive design optimized for performance and SEO.
 
 ## Environments
-- Preview: https://main--{repo}--{owner}.aem.page/
-- Live: https://main--{repo}--{owner}.aem.live/
 
-## Documentation
+- **Preview**: [https://main--framebyframe--coder-hal9000.aem.page/](https://main--framebyframe--coder-hal9000.aem.page/)
+- **Live**: [https://main--framebyframe--coder-hal9000.aem.live/](https://main--framebyframe--coder-hal9000.aem.live/)
 
-Before using the aem-boilerplate, we recommand you to go through the documentation on https://www.aem.live/docs/ and more specifically:
-1. [Developer Tutorial](https://www.aem.live/developer/tutorial)
-2. [The Anatomy of a Project](https://www.aem.live/developer/anatomy-of-a-project)
-3. [Web Performance](https://www.aem.live/developer/keeping-it-100)
-4. [Markup, Sections, Blocks, and Auto Blocking](https://www.aem.live/developer/markup-sections-blocks)
+## Approach
+
+1. **Documentation Review**:  
+   I began by reviewing the official [AEM.live documentation](https://www.aem.live/docs/), familiarizing myself with the platform and best practices for setting up a project.
+
+2. **Content Creation**:  
+   I used **Google Drive** to create content for the website pages, such as text and images. This content was then integrated into AEM.live using the appropriate page structures.
+
+3. **Custom Blocks**:  
+   A new block called **Movie Cards** was created to display clickable cards with movie posters.
+
+4. **Tabs and Header Breadcrumbs**:  
+   I added **new blocks** from block collection to handle dynamic tabbed content and header breadcrumbs to improve navigation and user experience.
+
+5. **Data Indexing**:  
+   Initially, I explored using **Google Sheets** for data indexing to get movie data. However, I ultimately decided against it, opting to ensure all content was directly available for search engine indexing.
+
+6. **Google Analytics (GA4) Integration**:  
+   I integrated **Google Analytics (GA4)** using **gtag.js** for tracking page views and events. Multiple approaches were tested to find the optimal solution for event tracking and performance.
+
+## Challenges
+
+1. **GA4 Script Performance Issue**:  
+   Initially, I added the **GA4 script** with **lazy loading**, but it caused performance issues. To fix this, I delayed the script loading but started losing some event data.  
+   - Solution: I implemented a queueing system to hold events until the **gtag** script was fully available, ensuring no events were missed. Additionally, I used **localStorage** to persist events until they could be sent.
+
+2. **Page Content Structure**:  
+   There were limited examples of how to structure page content in the AEM.live documentation, which required some exploration to understand the best practices for organizing and managing content. 
+
+3. **AEM Sidekick Issues**:  
+   I encountered occasional **AEM Sidekick** issues where it caused the browser to hang. The solution was to close the browser and disable the Sidekick when it wasn’t needed, or to open a few pages at once to minimize the issue.
+
+4. **SEO Challenges**:  
+   Ensuring proper **SEO** for the site was a bit tricky at first, especially with the data indexing and ensuring search engines could crawl all relevant content. In the end, I relied on standard SEO practices such as optimized meta tags and accessible HTML to improve the site’s SEO.
+
+## Things to be Improved
+
+1. **SEO Optimization**:  
+   Currently, the **X-Robots-Tag** response header is set to `noindex, nofollow` due to the use of live and page preview sites. This prevents search engines from indexing the site. Hosting the site on a custom domain would help resolve this issue and allow the site to be indexed and followed by search engines.
+
+2. **Analytics Tracking**:  
+   The analytics tracking can be further improved by utilizing more advanced strategies.
+
 
 ## Installation
+
+To set up the project locally:
 
 ```sh
 npm i
@@ -21,14 +66,31 @@ npm i
 
 ## Linting
 
+To check for code quality issues:
+
 ```sh
 npm run lint
 ```
 
-## Local development
+## Local Development
 
-1. Create a new repository based on the `aem-boilerplate` template and add a mountpoint in the `fstab.yaml`
-1. Add the [AEM Code Sync GitHub App](https://github.com/apps/aem-code-sync) to the repository
-1. Install the [AEM CLI](https://github.com/adobe/helix-cli): `npm install -g @adobe/aem-cli`
-1. Start AEM Proxy: `aem up` (opens your browser at `http://localhost:3000`)
-1. Open the `{repo}` directory in your favorite IDE and start coding :)
+1. Install the [AEM CLI](https://github.com/adobe/helix-cli): `npm install -g @adobe/aem-cli`.
+2. Start AEM Proxy: `aem up` (opens your browser at `http://localhost:3000`).
+3. Open the `{repo}` directory in your favorite IDE and start coding! 
+
+## Results
+
+- **Core Web Vitals**: The website achieved **100% CWV scores** on PageSpeed Insights after optimizing images, lazy loading, and adjusting caching strategies.
+
+  - Home page - https://pagespeed.web.dev/analysis/https-main--framebyframe--coder-hal9000-aem-live/o6nbkc9l4o?form_factor=mobile
+  - Movies page - https://pagespeed.web.dev/analysis/https-main--framebyframe--coder-hal9000-aem-live-movies/zqbfdmw80w?form_factor=mobile
+  - Movie details page - https://pagespeed.web.dev/analysis/https-main--framebyframe--coder-hal9000-aem-live-movies-inception/k6pubwt1fw?form_factor=mobile
+  - About us page - https://pagespeed.web.dev/analysis/https-main--framebyframe--coder-hal9000-aem-live-about-us/is16vvd6so?form_factor=mobile
+
+- **Google Analytics Integration**: GA4 is successfully tracking page views and interactions. Event data is reliably sent to Google Analytics even after performance optimizations.
+- **SEO**: Standard SEO practices were applied to ensure good visibility on search engines, including the use of appropriate meta tags, alt text for images, and header tags.
+
+## Conclusion
+
+The **Frame by Frame** project is a demonstration of the power of AEM.live for building fast, scalable websites. Despite a few challenges related to GA4 integration and content indexing, the project successfully showcases how AEM.live can be used to build an optimized website with seamless performance, excellent SEO, and detailed analytics.
+
