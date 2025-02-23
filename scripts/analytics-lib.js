@@ -76,7 +76,7 @@ export function processQueue() {
 /**
  * Tracks a page view event and queues or sends it based on GA availability.
  */
-export async function trackPageView() {
+export function trackPageView() {
   const eventData = {
     event_name: 'page_view',
     page_path: window.location.pathname,
@@ -90,10 +90,10 @@ export async function trackPageView() {
 /**
  * Tracks interaction events (clicks on links, buttons, etc.) and queues or sends them.
  */
-export async function trackInteractions() {
+export function trackInteractions() {
   document.addEventListener(
     'click',
-    async (event) => {
+    (event) => {
       const target = event.target.closest('a, button, [role="button"]');
       if (!target) return;
 
