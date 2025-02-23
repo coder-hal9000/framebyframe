@@ -57,7 +57,7 @@
 
 ## Results
 
-- **Core Web Vitals**: The website achieved **100% CWV scores** on PageSpeed Insights after optimizing images, lazy loading, and adjusting caching strategies.
+- **Core Web Vitals**: The website achieved **100% CWV scores** on PageSpeed Insights.
 
   - Home page - https://pagespeed.web.dev/analysis/https-main--framebyframe--coder-hal9000-aem-live/o6nbkc9l4o?form_factor=mobile
   - Movies page - https://pagespeed.web.dev/analysis/https-main--framebyframe--coder-hal9000-aem-live-movies/zqbfdmw80w?form_factor=mobile
@@ -69,8 +69,6 @@
 
 
 - **Google Analytics Integration**: GA4 is successfully tracking page views and interactions. Event data is reliably sent to Google Analytics even after performance optimizations.
-- **SEO**: Standard SEO practices were applied to ensure good visibility on search engines, including the use of appropriate meta tags, alt text for images, and header tags.
-
 
 ## Installation
 
