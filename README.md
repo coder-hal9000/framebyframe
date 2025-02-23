@@ -55,6 +55,22 @@
 2. **Analytics Tracking**:  
    The analytics tracking can be further improved by utilizing more advanced strategies.
 
+## Results
+
+- **Core Web Vitals**: The website achieved **100% CWV scores** on PageSpeed Insights after optimizing images, lazy loading, and adjusting caching strategies.
+
+  - Home page - https://pagespeed.web.dev/analysis/https-main--framebyframe--coder-hal9000-aem-live/o6nbkc9l4o?form_factor=mobile
+  - Movies page - https://pagespeed.web.dev/analysis/https-main--framebyframe--coder-hal9000-aem-live-movies/zqbfdmw80w?form_factor=mobile
+  - Movie details page - https://pagespeed.web.dev/analysis/https-main--framebyframe--coder-hal9000-aem-live-movies-inception/k6pubwt1fw?form_factor=mobile
+  - About us page - https://pagespeed.web.dev/analysis/https-main--framebyframe--coder-hal9000-aem-live-about-us/is16vvd6so?form_factor=mobile
+
+  ![Mobile](https://private-user-images.githubusercontent.com/199352433/415982455-0d5b0cf8-f4f0-452e-9e3d-8279484da39b.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDAzMTE3NjYsIm5iZiI6MTc0MDMxMTQ2NiwicGF0aCI6Ii8xOTkzNTI0MzMvNDE1OTgyNDU1LTBkNWIwY2Y4LWY0ZjAtNDUyZS05ZTNkLTgyNzk0ODRkYTM5Yi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMjIzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDIyM1QxMTUxMDZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xNmI3OWIzMDI3OWZmYjExODRkNThiMDgxMzYzNTE2MjQzZDM1NzE0Y2NiNzgwYTcwYzM5YmQ2NDJiZDZmNTkwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.mmD6-DcqQ-885fEm6pSTnl0Woj7iLaeNoMvDy7y2_y0)
+  ![Desktop](https://private-user-images.githubusercontent.com/199352433/415982460-8eb35cb3-a874-481c-8b43-71202439e8cb.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDAzMTE3NjYsIm5iZiI6MTc0MDMxMTQ2NiwicGF0aCI6Ii8xOTkzNTI0MzMvNDE1OTgyNDYwLThlYjM1Y2IzLWE4NzQtNDgxYy04YjQzLTcxMjAyNDM5ZThjYi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMjIzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDIyM1QxMTUxMDZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02OWM4ZjQ3M2IwZjc2M2I4Nzg2M2EzODg4ZDNjNTBhOTc0ZjBlOTMzYzBmNjhiYjAyZDIwN2VjZWU1NzRhMmYxJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.vzTXa1K3Mm5u073HXs64NfeFo29QA1mpzsM0hBhn1Mc)
+
+
+- **Google Analytics Integration**: GA4 is successfully tracking page views and interactions. Event data is reliably sent to Google Analytics even after performance optimizations.
+- **SEO**: Standard SEO practices were applied to ensure good visibility on search engines, including the use of appropriate meta tags, alt text for images, and header tags.
+
 
 ## Installation
 
@@ -77,20 +93,3 @@ npm run lint
 1. Install the [AEM CLI](https://github.com/adobe/helix-cli): `npm install -g @adobe/aem-cli`.
 2. Start AEM Proxy: `aem up` (opens your browser at `http://localhost:3000`).
 3. Open the `{repo}` directory in your favorite IDE and start coding! 
-
-## Results
-
-- **Core Web Vitals**: The website achieved **100% CWV scores** on PageSpeed Insights after optimizing images, lazy loading, and adjusting caching strategies.
-
-  - Home page - https://pagespeed.web.dev/analysis/https-main--framebyframe--coder-hal9000-aem-live/o6nbkc9l4o?form_factor=mobile
-  - Movies page - https://pagespeed.web.dev/analysis/https-main--framebyframe--coder-hal9000-aem-live-movies/zqbfdmw80w?form_factor=mobile
-  - Movie details page - https://pagespeed.web.dev/analysis/https-main--framebyframe--coder-hal9000-aem-live-movies-inception/k6pubwt1fw?form_factor=mobile
-  - About us page - https://pagespeed.web.dev/analysis/https-main--framebyframe--coder-hal9000-aem-live-about-us/is16vvd6so?form_factor=mobile
-
-- **Google Analytics Integration**: GA4 is successfully tracking page views and interactions. Event data is reliably sent to Google Analytics even after performance optimizations.
-- **SEO**: Standard SEO practices were applied to ensure good visibility on search engines, including the use of appropriate meta tags, alt text for images, and header tags.
-
-## Conclusion
-
-The **Frame by Frame** project is a demonstration of the power of AEM.live for building fast, scalable websites. Despite a few challenges related to GA4 integration and content indexing, the project successfully showcases how AEM.live can be used to build an optimized website with seamless performance, excellent SEO, and detailed analytics.
-
