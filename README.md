@@ -53,7 +53,7 @@
    Currently, the **X-Robots-Tag** response header is set to `noindex, nofollow` due to the use of live and page preview sites. This prevents search engines from indexing the site. Hosting the site on a custom domain would help resolve this issue and allow the site to be indexed and followed by search engines.
 
 2. **Analytics Tracking**:  
-   The analytics tracking can be further improved by utilizing more advanced strategies.
+   The analytics tracking can be further improved by utilizing more advanced strategies and need to add consent management.
 
 ## Results
 
